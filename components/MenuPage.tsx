@@ -57,7 +57,12 @@ const menuSections = [
     }
 ];
 
-const MenuSection = ({ section, setVisibleSection }: { section: typeof menuSections[0], setVisibleSection: (id: string) => void }) => {
+interface MenuSectionProps {
+    section: typeof menuSections[0];
+    setVisibleSection: (id: string) => void;
+}
+
+const MenuSection: React.FC<MenuSectionProps> = ({ section, setVisibleSection }) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { margin: "-50% 0px -50% 0px" });
 

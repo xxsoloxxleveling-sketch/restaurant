@@ -94,8 +94,8 @@ const CurtainReveal: React.FC<CurtainRevealProps> = ({ children, imagesToPreload
               style={{
                 width: "50%",
                 // Fallback gradient + texture
-                backgroundImage: "url('/textures/velvet.png'), linear-gradient(to right, #4a0404, #2a0202)",
-                backgroundColor: "#2a0202",
+                backgroundImage: "url('/textures/velvet.png'), linear-gradient(to right, #1a1a1a, #000000)",
+                backgroundColor: "#000000",
                 backgroundSize: "cover", // Ensure texture covers
                 boxShadow: "10px 0 30px rgba(0,0,0,0.5)",
                 transformOrigin: "top left"
@@ -120,8 +120,8 @@ const CurtainReveal: React.FC<CurtainRevealProps> = ({ children, imagesToPreload
               style={{
                 width: "50%",
                 // Fallback gradient + texture
-                backgroundImage: "url('/textures/velvet.png'), linear-gradient(to left, #4a0404, #2a0202)",
-                backgroundColor: "#2a0202",
+                backgroundImage: "url('/textures/velvet.png'), linear-gradient(to left, #1a1a1a, #000000)",
+                backgroundColor: "#000000",
                 backgroundSize: "cover",
                 boxShadow: "-10px 0 30px rgba(0,0,0,0.5)",
                 transformOrigin: "top right"

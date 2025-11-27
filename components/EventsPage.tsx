@@ -175,9 +175,9 @@ const EventsPage: React.FC = () => {
             className="w-full md:w-1/2"
           >
             <img
-              src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              src="/images/wedding-outdoor-extended.png"
               alt="Wedding Setup"
-              className="rounded-lg shadow-2xl border border-white/10"
+              className="w-full h-[500px] object-cover rounded-lg shadow-2xl border border-white/10"
             />
           </motion.div>
           <motion.div
@@ -247,25 +247,25 @@ const EventsPage: React.FC = () => {
         <ServiceRow
           title="Corporate & Business Events"
           description="Elevate your corporate gatherings, conferences, and product launches with our sophisticated catering. We provide professional, seamless service and exquisite menus designed to impress."
-          image="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          image="/images/corporate-business.jpg"
           isReversed={false}
         />
         <ServiceRow
           title="Weddings & Grand Celebrations"
           description="Make your special day truly unforgettable. Our bespoke wedding catering services offer personalized menus, elegant presentations, and meticulous attention to detail, ensuring a culinary experience as unique as your love story."
-          image="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          image="/images/wedding-grand.jpg"
           isReversed={true}
         />
         <ServiceRow
           title="Private Parties & Social Gatherings"
           description="Host a memorable party without the stress. From intimate dinner parties to large social events, we craft delicious food and provide impeccable service, allowing you to relax and enjoy your guests."
-          image="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          image="/images/private-party-social.jpg"
           isReversed={false}
         />
         <ServiceRow
           title="Festivals & Large-Scale Events"
           description="Managing catering for large crowds requires expertise and efficiency. We specialize in delivering high-quality, diverse food options for festivals, concerts, and public events, ensuring a smooth and satisfying experience for all attendees."
-          image="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          image="/images/festival-event.jpg"
           isReversed={true}
         />
       </section>
@@ -301,8 +301,19 @@ const EventsPage: React.FC = () => {
       </section>
 
       {/* Footer CTA - Black Background */}
-      <section className="py-32 bg-black text-center border-t border-white/5 mt-20 rounded-2xl shadow-xl">
-        <div className="container mx-auto px-6">
+      <section className="py-32 relative text-center border-t border-white/5 rounded-2xl shadow-xl overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <video
+            src="/videos/event-cta-bg.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover opacity-40"
+          />
+          <div className="absolute inset-0 bg-black/60" />
+        </div>
+        <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}

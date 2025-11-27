@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { Instagram, Linkedin, Facebook, ShieldCheck } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -56,9 +57,28 @@ const Footer: React.FC = () => {
 
         </div>
 
-        <div className="border-t border-neutral-300 dark:border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-neutral-400 font-light">
-          <p>&copy; 2025 Culinova Catering FZCO. All rights reserved.</p>
-          <div className="mt-4 md:mt-0 flex space-x-6">
+        <div className="border-t border-neutral-300 dark:border-white/10 pt-8 grid grid-cols-1 md:grid-cols-3 gap-4 items-center text-xs text-neutral-400 font-light">
+          {/* Left: Copyright */}
+          <div className="text-center md:text-left">
+            <p>&copy; 2025 Culinova Catering FZCO. All rights reserved.</p>
+          </div>
+
+          {/* Center: Developer Credit */}
+          <div className="flex justify-center">
+            <motion.a
+              href="https://www.linkedin.com/in/mahnoor-sardar-12412a381/"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05, textShadow: "0px 0px 8px rgb(212,175,55)" }}
+              className="text-gold-500 font-medium relative group"
+            >
+              <span className="relative z-10">Developed by Mahify</span>
+              <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-gold-500 transition-all duration-300 group-hover:w-full" />
+            </motion.a>
+          </div>
+
+          {/* Right: Links */}
+          <div className="flex justify-center md:justify-end space-x-6">
             <a href="/" className="hover:text-charcoal dark:hover:text-white transition-colors">Privacy Policy</a>
             <a href="/" className="hover:text-charcoal dark:hover:text-white transition-colors">Terms of Service</a>
           </div>

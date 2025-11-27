@@ -5,16 +5,16 @@ import { ArrowRight } from 'lucide-react';
 
 const services = [
   {
-    id: 'corp',
-    title: 'Corporate Events',
-    description: 'Sophisticated catering for board meetings, conferences, and galas.',
-    image: '/images/corporate.jpg'
-  },
-  {
     id: 'weddings',
     title: 'Weddings',
     description: 'Bespoke menus and elegant service for your special day.',
     image: '/images/wedding-home.jpg'
+  },
+  {
+    id: 'corp',
+    title: 'Corporate Events',
+    description: 'Sophisticated catering for board meetings, conferences, and galas.',
+    image: '/images/corporate.jpg'
   },
   {
     id: 'private',

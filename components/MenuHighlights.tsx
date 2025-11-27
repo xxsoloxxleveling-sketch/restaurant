@@ -26,7 +26,7 @@ const menuItems = [
     id: 4,
     title: "Artisan Desserts",
     description: "Elegant pastries and traditional sweets that provide the perfect ending to any meal, handcrafted by our master pastry chefs.",
-    image: "/artisan_desserts.webp"
+    image: "/images/artisan-desserts.jpg"
   }
 ];
 

@@ -1,11 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense, lazy } from 'react';
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Home from './components/Home';
-import EventsPage from './components/EventsPage';
-import AboutPage from './components/AboutPage';
-import MenuPage from './components/MenuPage';
-import ContactPage from './components/ContactPage';
 import Footer from './components/Footer';
 import CurtainReveal from './components/CurtainReveal';
 import CustomCursor from './components/CustomCursor';
@@ -13,6 +8,33 @@ import BookingModal from './components/BookingModal';
 import GlobalEffects from './components/GlobalEffects';
 import PageTransition from './components/PageTransition';
 import { AnimatePresence } from 'framer-motion';
+import Preloader from './components/Preloader';
+
+// Lazy load pages
+const Home = lazy(() => import('./components/Home'));
+const EventsPage = lazy(() => import('./components/EventsPage'));
+const AboutPage = lazy(() => import('./components/AboutPage'));
+const MenuPage = lazy(() => import('./components/MenuPage'));
+const ContactPage = lazy(() => import('./components/ContactPage'));
+
+
+
+const AnimatedRoutes = () => {
+  const location = useLocation();
+  return (
+    <AnimatePresence mode="wait">
+      <Suspense fallback={<Preloader />}>
+        <Routes location={location}>
+          <Route path="/" element={<PageTransition><Home /></PageTransition>} />
+          <Route path="/events" element={<PageTransition><EventsPage /></PageTransition>} />
+          <Route path="/about" element={<PageTransition><AboutPage /></PageTransition>} />
+          <Route path="/menu" element={<PageTransition><MenuPage /></PageTransition>} />
+          <Route path="/contact" element={<PageTransition><ContactPage /></PageTransition>} />
+        </Routes>
+      </Suspense>
+    </AnimatePresence>
+  );
+};
 
 
 function App() {
@@ -84,9 +106,13 @@ function App() {
         '/images/menu/arabian.png',
         '/images/menu/continental.png',
         '/images/menu/south-asian.png',
-        '/images/menu/desserts.png'
+        '/images/menu/desserts.png',
+        '/images/corporate-business.jpg',
+        '/images/wedding-grand.jpg',
+        '/images/private-party-social.jpg',
+        '/images/festival-event.jpg'
       ]}
-        videosToPreload={['/videos/hero-luxury.mp4']}
+        videosToPreload={['/videos/hero-luxury.mp4', '/videos/about-hero-new.mp4', '/videos/event-cta-bg.mp4']}
       >
         <Router>
           <Navbar
@@ -106,19 +132,6 @@ function App() {
   );
 }
 
-const AnimatedRoutes = () => {
-  const location = useLocation();
-  return (
-    <AnimatePresence mode="wait">
-      <Routes location={location}>
-        <Route path="/" element={<PageTransition><Home /></PageTransition>} />
-        <Route path="/events" element={<PageTransition><EventsPage /></PageTransition>} />
-        <Route path="/about" element={<PageTransition><AboutPage /></PageTransition>} />
-        <Route path="/menu" element={<PageTransition><MenuPage /></PageTransition>} />
-        <Route path="/contact" element={<PageTransition><ContactPage /></PageTransition>} />
-      </Routes>
-    </AnimatePresence>
-  );
-};
+
 
 export default App;

@@ -4,12 +4,12 @@ import { CheckCircle2 } from 'lucide-react';
 
 const Sustainability: React.FC = () => {
   return (
-    <section className="relative py-32 bg-fixed bg-center bg-cover" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1464226184884-fa280b87c399?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")' }}>
+    <section className="relative py-32 bg-fixed bg-center bg-cover" style={{ backgroundImage: 'url("/images/home-page-background-at-the-bottom.avif")' }}>
       <div className="absolute inset-0 bg-charcoal/80" />
-      
+
       <div className="relative z-10 container mx-auto px-6 md:px-12">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -19,7 +19,7 @@ const Sustainability: React.FC = () => {
             "Serving thousands daily demands an uncompromising commitment to hygiene and environment."
           </motion.h2>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
