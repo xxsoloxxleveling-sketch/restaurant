@@ -29,7 +29,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme = 'dark', toggleTheme, isAudioPla
     { name: 'Home', path: '/', hash: '#hero' },
     { name: 'About', path: '/about', hash: '' },
     { name: 'Events', path: '/events', hash: '' },
-    { name: 'Menu', path: '/', hash: '#menu' },
+    { name: 'Menu', path: '/menu', hash: '' },
     { name: 'Safety', path: '/', hash: '#haccp' },
     { name: 'Contact', path: '/contact', hash: '' },
   ];

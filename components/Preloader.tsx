@@ -6,7 +6,7 @@ const Preloader: React.FC = () => {
   // Updated for even slower, smoother motion
   const curtainTransition = {
     duration: 4.5, // Significantly slower for premium feel
-    ease: [0.7, 0, 0.15, 1], // Refined Bezier for ultra-smooth dragging start and soft settling
+    ease: [0.7, 0, 0.15, 1] as const, // Refined Bezier for ultra-smooth dragging start and soft settling
     delay: 0.2,
   };
 
@@ -35,7 +35,7 @@ const Preloader: React.FC = () => {
       >
         {/* Inner Shadow for 3D Fold effect at the seam */}
         <div className="absolute right-0 top-0 h-full w-32 bg-gradient-to-l from-black/60 to-transparent pointer-events-none" />
-        
+
         {/* Bottom fold shadow for "length" feel */}
         <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/80 to-transparent opacity-60" />
       </motion.div>
@@ -50,8 +50,8 @@ const Preloader: React.FC = () => {
       >
         {/* Inner Shadow for 3D Fold effect at the seam */}
         <div className="absolute left-0 top-0 h-full w-32 bg-gradient-to-r from-black/60 to-transparent pointer-events-none" />
-        
-         {/* Bottom fold shadow for "length" feel */}
+
+        {/* Bottom fold shadow for "length" feel */}
         <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/80 to-transparent opacity-60" />
       </motion.div>
 
@@ -59,10 +59,10 @@ const Preloader: React.FC = () => {
       <motion.div
         className="relative z-30 flex flex-col items-center justify-center"
         initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ 
+        animate={{
           opacity: [0, 1, 1, 0], // Fade in, hold, fade out
           scale: [0.9, 1, 1.1, 1.5] // Subtle zoom in
-        }} 
+        }}
         transition={{
           duration: 4.5,
           times: [0, 0.1, 0.5, 1], // Keyframe timing adapted for longer duration

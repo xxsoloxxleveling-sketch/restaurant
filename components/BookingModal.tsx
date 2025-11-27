@@ -37,8 +37,10 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                         {/* Content */}
                         <div className="relative z-10 p-8 md:p-10">
                             <button
+                                type="button"
                                 onClick={onClose}
                                 className="absolute top-4 right-4 text-white/50 hover:text-white transition-colors"
+                                aria-label="Close modal"
                             >
                                 <X size={24} />
                             </button>
@@ -50,8 +52,9 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
 
                             <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                                 <div>
-                                    <label className="block text-xs uppercase tracking-widest text-gold-500 mb-2">Name</label>
+                                    <label htmlFor="booking-name" className="block text-xs uppercase tracking-widest text-gold-500 mb-2">Name</label>
                                     <input
+                                        id="booking-name"
                                         type="text"
                                         className="w-full bg-black/40 border border-white/10 rounded-sm px-4 py-3 text-white focus:border-gold-500 focus:outline-none transition-colors"
                                         placeholder="John Doe"
@@ -59,8 +62,9 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                                 </div>
 
                                 <div>
-                                    <label className="block text-xs uppercase tracking-widest text-gold-500 mb-2">Email</label>
+                                    <label htmlFor="booking-email" className="block text-xs uppercase tracking-widest text-gold-500 mb-2">Email</label>
                                     <input
+                                        id="booking-email"
                                         type="email"
                                         className="w-full bg-black/40 border border-white/10 rounded-sm px-4 py-3 text-white focus:border-gold-500 focus:outline-none transition-colors"
                                         placeholder="john@example.com"
@@ -69,8 +73,8 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
 
                                 <div className="grid grid-cols-2 gap-4">
                                     <div>
-                                        <label className="block text-xs uppercase tracking-widest text-gold-500 mb-2">Event Type</label>
-                                        <select className="w-full bg-black/40 border border-white/10 rounded-sm px-4 py-3 text-white focus:border-gold-500 focus:outline-none transition-colors appearance-none">
+                                        <label htmlFor="booking-type" className="block text-xs uppercase tracking-widest text-gold-500 mb-2">Event Type</label>
+                                        <select id="booking-type" className="w-full bg-black/40 border border-white/10 rounded-sm px-4 py-3 text-white focus:border-gold-500 focus:outline-none transition-colors appearance-none">
                                             <option>Corporate</option>
                                             <option>Wedding</option>
                                             <option>Private Party</option>
@@ -78,8 +82,9 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                                         </select>
                                     </div>
                                     <div>
-                                        <label className="block text-xs uppercase tracking-widest text-gold-500 mb-2">Date</label>
+                                        <label htmlFor="booking-date" className="block text-xs uppercase tracking-widest text-gold-500 mb-2">Date</label>
                                         <input
+                                            id="booking-date"
                                             type="date"
                                             className="w-full bg-black/40 border border-white/10 rounded-sm px-4 py-3 text-white focus:border-gold-500 focus:outline-none transition-colors"
                                         />

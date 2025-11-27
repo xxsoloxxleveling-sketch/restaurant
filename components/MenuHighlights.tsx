@@ -8,25 +8,25 @@ const menuItems = [
     id: 1,
     title: "South Asian Cuisines",
     description: "Indulge in carefully prepared authentic South Asian cuisine, rich in spices and tradition. From slow-cooked curries to aromatic biryanis, every dish tells a story of heritage.",
-    image: "/south_asian_cuisine.png"
+    image: "/south_asian_cuisine.webp"
   },
   {
     id: 2,
     title: "Middle Eastern",
     description: "Experience the essence of Middle Eastern hospitality with our selection of mezze, tender grills, and traditional dishes crafted with premium ingredients.",
-    image: "/middle_eastern_cuisine.png"
+    image: "/middle_eastern_cuisine.webp"
   },
   {
     id: 3,
     title: "Continental & Pan Asian",
     description: "A journey through global flavours. Expertly executed continental mains and vibrant Pan-Asian specialties that bring modern sophistication to your event.",
-    image: "/continental_pan_asian.jpg"
+    image: "/continental_pan_asian.webp"
   },
   {
     id: 4,
     title: "Artisan Desserts",
     description: "Elegant pastries and traditional sweets that provide the perfect ending to any meal, handcrafted by our master pastry chefs.",
-    image: "/artisan_desserts.png"
+    image: "/artisan_desserts.webp"
   }
 ];
 

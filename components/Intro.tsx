@@ -6,9 +6,9 @@ const Intro: React.FC = () => {
     <section id="intro" className="py-24 bg-stone-50 dark:bg-charcoal transition-colors duration-500 overflow-hidden">
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row items-center gap-16">
-          
+
           {/* Text Content */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -19,7 +19,7 @@ const Intro: React.FC = () => {
               Our Story
             </h3>
             <h2 className="font-serif text-4xl md:text-5xl text-charcoal dark:text-white mb-8">
-              Culinary Artistry <br/> in the Heart of Dubai
+              Culinary Artistry <br /> in the Heart of Dubai
             </h2>
             <div className="max-w-[45ch]">
               <p className="text-neutral-600 dark:text-stone-300 leading-loose mb-6 font-light text-lg">
@@ -32,7 +32,7 @@ const Intro: React.FC = () => {
           </motion.div>
 
           {/* Image Content */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -40,10 +40,10 @@ const Intro: React.FC = () => {
             className="md:w-1/2 relative"
           >
             <div className="relative z-10 overflow-hidden shadow-2xl">
-               {/* Image: Chef hands finishing a plate - detailed macro shot */}
-              <img 
-                src="https://images.unsplash.com/photo-1577106263724-2c8e03bfe9cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="Chef plating dish" 
+              {/* Image: Chef hands finishing a plate - detailed macro shot */}
+              <img
+                src="/images/artisian.jpg"
+                alt="Culinary Artistry"
                 className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700 ease-out"
               />
             </div>

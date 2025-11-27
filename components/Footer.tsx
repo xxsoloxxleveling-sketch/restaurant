@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Instagram, Linkedin, Facebook, ShieldCheck } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -17,9 +18,9 @@ const Footer: React.FC = () => {
                 Catering FZCO
               </span>
               <div className="flex space-x-4">
-                <a href="#" className="text-neutral-400 hover:text-gold-600 transition-colors"><Instagram size={20} /></a>
-                <a href="#" className="text-neutral-400 hover:text-gold-600 transition-colors"><Facebook size={20} /></a>
-                <a href="#" className="text-neutral-400 hover:text-gold-600 transition-colors"><Linkedin size={20} /></a>
+                <a href="https://www.instagram.com/culinovafzco?igsh=MXh4N2U1dGxuOXI3Zg==" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-gold-600 transition-colors"><Instagram size={20} /></a>
+                <a href="https://www.facebook.com/culinovacateringllc/" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-gold-600 transition-colors"><Facebook size={20} /></a>
+                <a href="https://www.linkedin.com/in/mahnoor-sardar-12412a381/" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-gold-600 transition-colors"><Linkedin size={20} /></a>
               </div>
             </div>
           </div>
@@ -28,10 +29,10 @@ const Footer: React.FC = () => {
           <div className="col-span-1">
             <h4 className="font-sans text-xs font-bold uppercase tracking-widest mb-6 text-gold-500">Explore</h4>
             <ul className="space-y-3 font-light text-sm text-stone-500 dark:text-stone-400">
-              <li><a href="#hero" className="hover:text-charcoal dark:hover:text-white transition-colors">Home</a></li>
-              <li><a href="#intro" className="hover:text-charcoal dark:hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#services" className="hover:text-charcoal dark:hover:text-white transition-colors">Services</a></li>
-              <li><a href="#menu" className="hover:text-charcoal dark:hover:text-white transition-colors">Menu Highlights</a></li>
+              <li><Link to="/" className="hover:text-charcoal dark:hover:text-white transition-colors">Home</Link></li>
+              <li><Link to="/about" className="hover:text-charcoal dark:hover:text-white transition-colors">About Us</Link></li>
+              <li><Link to="/events" className="hover:text-charcoal dark:hover:text-white transition-colors">Services</Link></li>
+              <li><Link to="/menu" className="hover:text-charcoal dark:hover:text-white transition-colors">Menu Highlights</Link></li>
             </ul>
           </div>
 
@@ -58,8 +59,8 @@ const Footer: React.FC = () => {
         <div className="border-t border-neutral-300 dark:border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-neutral-400 font-light">
           <p>&copy; 2025 Culinova Catering FZCO. All rights reserved.</p>
           <div className="mt-4 md:mt-0 flex space-x-6">
-            <a href="#" className="hover:text-charcoal dark:hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-charcoal dark:hover:text-white transition-colors">Terms of Service</a>
+            <a href="/" className="hover:text-charcoal dark:hover:text-white transition-colors">Privacy Policy</a>
+            <a href="/" className="hover:text-charcoal dark:hover:text-white transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>

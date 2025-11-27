@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import EventsPage from './components/EventsPage';
 import AboutPage from './components/AboutPage';
+import MenuPage from './components/MenuPage';
 import ContactPage from './components/ContactPage';
 import Footer from './components/Footer';
 import CurtainReveal from './components/CurtainReveal';
@@ -69,7 +70,24 @@ function App() {
       <BookingModal isOpen={isModalOpen} onClose={closeModal} />
 
       {/* Curtain Reveal Wrapper */}
-      <CurtainReveal>
+      <CurtainReveal imagesToPreload={[
+        '/textures/velvet.png',
+        '/images/modern-kitchen.jpg',
+        '/images/innovation.jpg',
+        '/images/diversity.jpg',
+        '/images/commitment.jpg',
+        '/images/sustainability.jpg',
+        '/images/artisian.jpg',
+        '/images/corporate.jpg',
+        '/images/wedding-home.jpg',
+        '/images/private-party.jpg',
+        '/images/menu/arabian.png',
+        '/images/menu/continental.png',
+        '/images/menu/south-asian.png',
+        '/images/menu/desserts.png'
+      ]}
+        videosToPreload={['/videos/hero-luxury.mp4']}
+      >
         <Router>
           <Navbar
             theme={theme}
@@ -96,6 +114,7 @@ const AnimatedRoutes = () => {
         <Route path="/" element={<PageTransition><Home /></PageTransition>} />
         <Route path="/events" element={<PageTransition><EventsPage /></PageTransition>} />
         <Route path="/about" element={<PageTransition><AboutPage /></PageTransition>} />
+        <Route path="/menu" element={<PageTransition><MenuPage /></PageTransition>} />
         <Route path="/contact" element={<PageTransition><ContactPage /></PageTransition>} />
       </Routes>
     </AnimatePresence>

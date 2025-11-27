@@ -75,6 +75,7 @@ const AboutPage: React.FC = () => {
 
             {/* Film Grain Texture */}
             <div className="fixed inset-0 pointer-events-none z-50 opacity-[0.03] mix-blend-overlay"
+                aria-hidden="true"
                 style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }}
             />
 
@@ -86,14 +87,13 @@ const AboutPage: React.FC = () => {
                         className="w-full h-full"
                     >
                         <video
+                            src="/videos/about-hero-new.mp4"
                             autoPlay
                             loop
                             muted
                             playsInline
                             className="w-full h-full object-cover opacity-40"
-                        >
-                            <source src="/videos/about-hero-new.mp4" type="video/mp4" />
-                        </video>
+                        />
                     </motion.div>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-[#050505] z-10" />
@@ -224,51 +224,7 @@ const AboutPage: React.FC = () => {
                 </div>
             </section>
 
-            {/* 4. The Team - Hover Reveal */}
-            <section className="py-40 px-6 bg-[#050505]">
-                <div className="max-w-7xl mx-auto">
-                    <div className="text-center mb-24">
-                        <h2 className="text-5xl md:text-7xl font-serif text-white mb-6">The Maestros</h2>
-                        <p className="text-stone-400 max-w-2xl mx-auto text-xl font-light">Visionary minds behind the masterpieces.</p>
-                    </div>
 
-                    <div className="grid md:grid-cols-3 gap-1">
-                        {[
-                            { name: "Elena Rossi", role: "Executive Chef", img: "https://images.unsplash.com/photo-1583394293214-28ded15ee548?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-                            { name: "Marco Pierre", role: "Head of Pastry", img: "https://images.unsplash.com/photo-1566554273541-37a9ca77b91f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-                            { name: "Sarah Jenkins", role: "Event Director", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" }
-                        ].map((member, idx) => (
-                            <motion.div
-                                key={idx}
-                                initial={{ opacity: 0 }}
-                                whileInView={{ opacity: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: idx * 0.2 }}
-                                className="group relative h-[600px] overflow-hidden cursor-pointer"
-                            >
-                                <img
-                                    src={member.img}
-                                    alt={member.name}
-                                    className="w-full h-full object-cover grayscale transition-all duration-700 scale-100 group-hover:scale-105 group-hover:grayscale-0"
-                                />
-                                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/0 transition-colors duration-700" />
-
-                                <div className="absolute inset-0 flex flex-col justify-end p-10 bg-gradient-to-t from-black via-black/50 to-transparent opacity-100 group-hover:opacity-0 transition-opacity duration-500">
-                                    <h3 className="text-3xl font-serif text-white mb-2">{member.name}</h3>
-                                    <p className="text-gold-500 uppercase tracking-widest text-xs font-bold">{member.role}</p>
-                                </div>
-
-                                {/* Hover Reveal Content */}
-                                <div className="absolute inset-0 flex flex-col justify-center items-center bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 backdrop-blur-sm p-8 text-center">
-                                    <h3 className="text-4xl font-serif text-gold-500 mb-4">{member.name}</h3>
-                                    <p className="text-white font-light italic mb-8">"Passion is the secret ingredient that turns a meal into a memory."</p>
-                                    <button className="text-xs uppercase tracking-widest text-white border-b border-white hover:text-gold-500 hover:border-gold-500 transition-colors pb-1">Read Bio</button>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
 
             {/* 5. Testimonials - Infinite Marquee */}
             <section className="py-32 bg-[#0a0a0a] overflow-hidden border-t border-white/5">

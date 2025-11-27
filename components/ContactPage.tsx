@@ -20,6 +20,7 @@ const ContactPage: React.FC = () => {
                         className="w-full h-full object-cover opacity-60"
                     >
                         <source src="/videos/contact-hero.mp4" type="video/mp4" />
+                        <track kind="captions" srcLang="en" label="English" />
                     </video>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-[#0a0a0a] z-10" />
@@ -109,7 +110,7 @@ const ContactPage: React.FC = () => {
                         {/* Social Links */}
                         <div className="mt-12 flex gap-4">
                             {[Facebook, Instagram, Linkedin].map((Icon, i) => (
-                                <a key={i} href="#" className="p-3 rounded-full bg-[#111111] border border-white/10 hover:bg-[#D4AF37] hover:text-black hover:border-[#D4AF37] text-white transition-all duration-300">
+                                <a key={i} href="/" className="p-3 rounded-full bg-[#111111] border border-white/10 hover:bg-[#D4AF37] hover:text-black hover:border-[#D4AF37] text-white transition-all duration-300">
                                     <Icon size={20} />
                                 </a>
                             ))}
@@ -128,33 +129,33 @@ const ContactPage: React.FC = () => {
                         <form className="space-y-6">
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div>
-                                    <label className="block text-xs uppercase tracking-widest text-stone-500 mb-2">First Name</label>
-                                    <input type="text" className="w-full bg-black/50 border border-white/10 p-3 text-white focus:border-[#D4AF37] focus:outline-none transition-colors" placeholder="John" />
+                                    <label htmlFor="first-name" className="block text-xs uppercase tracking-widest text-stone-500 mb-2">First Name</label>
+                                    <input id="first-name" type="text" className="w-full bg-black/50 border border-white/10 p-3 text-white focus:border-[#D4AF37] focus:outline-none transition-colors" placeholder="John" />
                                 </div>
                                 <div>
-                                    <label className="block text-xs uppercase tracking-widest text-stone-500 mb-2">Last Name</label>
-                                    <input type="text" className="w-full bg-black/50 border border-white/10 p-3 text-white focus:border-[#D4AF37] focus:outline-none transition-colors" placeholder="Doe" />
+                                    <label htmlFor="last-name" className="block text-xs uppercase tracking-widest text-stone-500 mb-2">Last Name</label>
+                                    <input id="last-name" type="text" className="w-full bg-black/50 border border-white/10 p-3 text-white focus:border-[#D4AF37] focus:outline-none transition-colors" placeholder="Doe" />
                                 </div>
                             </div>
 
                             <div>
-                                <label className="block text-xs uppercase tracking-widest text-stone-500 mb-2">Email Address</label>
-                                <input type="email" className="w-full bg-black/50 border border-white/10 p-3 text-white focus:border-[#D4AF37] focus:outline-none transition-colors" placeholder="john@example.com" />
+                                <label htmlFor="email" className="block text-xs uppercase tracking-widest text-stone-500 mb-2">Email Address</label>
+                                <input id="email" type="email" className="w-full bg-black/50 border border-white/10 p-3 text-white focus:border-[#D4AF37] focus:outline-none transition-colors" placeholder="john@example.com" />
                             </div>
 
                             <div>
-                                <label className="block text-xs uppercase tracking-widest text-stone-500 mb-2">Subject</label>
-                                <select className="w-full bg-black/50 border border-white/10 p-3 text-white focus:border-[#D4AF37] focus:outline-none transition-colors">
-                                    <option>General Inquiry</option>
-                                    <option>Event Booking</option>
-                                    <option>Partnership</option>
-                                    <option>Careers</option>
+                                <label htmlFor="subject" className="block text-xs uppercase tracking-widest text-stone-500 mb-2">Subject</label>
+                                <select id="subject" defaultValue="General Inquiry" className="w-full bg-black/50 border border-white/10 p-3 text-white focus:border-[#D4AF37] focus:outline-none transition-colors">
+                                    <option value="General Inquiry">General Inquiry</option>
+                                    <option value="Event Booking">Event Booking</option>
+                                    <option value="Partnership">Partnership</option>
+                                    <option value="Careers">Careers</option>
                                 </select>
                             </div>
 
                             <div>
-                                <label className="block text-xs uppercase tracking-widest text-stone-500 mb-2">Message</label>
-                                <textarea rows={4} className="w-full bg-black/50 border border-white/10 p-3 text-white focus:border-[#D4AF37] focus:outline-none transition-colors" placeholder="How can we help you?"></textarea>
+                                <label htmlFor="message" className="block text-xs uppercase tracking-widest text-stone-500 mb-2">Message</label>
+                                <textarea id="message" rows={4} className="w-full bg-black/50 border border-white/10 p-3 text-white focus:border-[#D4AF37] focus:outline-none transition-colors" placeholder="How can we help you?"></textarea>
                             </div>
 
                             <button type="submit" className="w-full bg-[#D4AF37] text-black font-bold uppercase tracking-widest py-4 hover:bg-white transition-colors duration-300 flex items-center justify-center gap-2">

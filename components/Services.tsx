@@ -8,19 +8,19 @@ const services = [
     id: 'corp',
     title: 'Corporate Events',
     description: 'Sophisticated catering for board meetings, conferences, and galas.',
-    image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image: '/images/corporate.jpg'
   },
   {
     id: 'weddings',
     title: 'Weddings',
     description: 'Bespoke menus and elegant service for your special day.',
-    image: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image: '/images/wedding-home.jpg'
   },
   {
     id: 'private',
     title: 'Private Parties',
     description: 'Intimate gatherings to grand celebrations, handled with care.',
-    image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image: '/images/private-party.jpg'
   }
 ];
 
