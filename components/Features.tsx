@@ -26,7 +26,7 @@ const strengths: StrengthItem[] = [
   {
     id: 'diversity',
     title: 'Diversity',
-    description: 'Experience across corporate, guest house, educational, and event catering sectors. We offer Continental, Pan Asian, Middle Eastern and South Asian Cuisines.',
+    description: 'Experience across corporate, guest house, educational, and event catering sectors. We offer Continental, Pan Asian, Middle Eastern and South Asian.',
     image: '/images/diversity.jpg'
   },
   {

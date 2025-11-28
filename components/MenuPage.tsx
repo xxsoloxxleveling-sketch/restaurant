@@ -18,16 +18,29 @@ const menuSections = [
     },
     {
         id: 'continental',
-        title: 'Continental & Pan Asian',
-        description: 'A fusion of global tastes. From classic European techniques to the bold and vibrant flavors of Asia, our continental and pan-asian selection offers something for everyone.',
+        title: 'Continental Cuisine',
+        description: 'From classic European techniques to modern interpretations, our continental selection offers sophisticated flavors for discerning palates.',
         items: [
             'Grilled Salmon with Asparagus',
             'Beef Tenderloin with Truffle Mash',
+            'Mushroom Risotto',
+            'Herb Roasted Chicken',
+            'Seared Scallops'
+        ],
+        image: '/continental_cuisine.png'
+    },
+    {
+        id: 'pan-asian',
+        title: 'Pan Asian Specialties',
+        description: 'Bold and vibrant flavors of Asia. A journey through the culinary traditions of the East, featuring authentic spices and fresh ingredients.',
+        items: [
             'Thai Green Curry',
             'Dim Sum Collection',
-            'Stir-Fried Noodles'
+            'Stir-Fried Noodles',
+            'Kung Pao Chicken',
+            'Sushi Platter'
         ],
-        image: '/images/menu/continental.png'
+        image: '/continental_pan_asian.webp'
     },
     {
         id: 'south-asian',
@@ -192,9 +205,14 @@ const MenuHero = () => {
                     transition={{ duration: 1 }}
                 >
                     <h1 className="font-serif text-5xl md:text-8xl text-white mb-6">Our Culinary Journey</h1>
-                    <p className="text-stone-300 text-lg md:text-2xl font-light max-w-2xl mx-auto">
+                    <p className="text-stone-300 text-lg md:text-2xl font-light max-w-2xl mx-auto mb-8">
                         Explore a world of flavors, crafted with passion and precision.
                     </p>
+                    <Link to="/build-menu">
+                        <button className="px-8 py-3 bg-gold-500 text-black font-semibold rounded-full hover:bg-white transition-colors duration-300 uppercase tracking-widest text-sm">
+                            Build Your Own Menu
+                        </button>
+                    </Link>
                 </motion.div>
             </div>
         </section>

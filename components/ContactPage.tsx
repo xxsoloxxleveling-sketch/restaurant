@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, Send, Linkedin, Instagram, Facebook } from 'lucide-react';
+import FAQ from './FAQ';
 
 const ContactPage: React.FC = () => {
     useEffect(() => {
@@ -181,6 +182,9 @@ const ContactPage: React.FC = () => {
                 {/* Overlay to reduce map brightness further if needed */}
                 <div className="absolute inset-0 bg-black/20 pointer-events-none" />
             </section>
+
+            {/* FAQ Section */}
+            <FAQ />
         </div>
     );
 };

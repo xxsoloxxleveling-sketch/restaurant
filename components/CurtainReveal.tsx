@@ -47,8 +47,8 @@ const CurtainReveal: React.FC<CurtainRevealProps> = ({ children, imagesToPreload
     });
 
     // 4. Animation Sequence Timer
-    // 2.0s (Loading Bar) + 3.5s (Curtain Open) = 5.5s Total
-    const minimumTimer = new Promise(resolve => setTimeout(resolve, 5500));
+    // Adjusted to match visual animation (approx 4.7s total)
+    const minimumTimer = new Promise(resolve => setTimeout(resolve, 4000));
 
     // Combine all loading tasks
     const loadingTask = Promise.all([minimumTimer, preloadImages(), preloadVideos(), waitForPageLoad]);
@@ -58,17 +58,17 @@ const CurtainReveal: React.FC<CurtainRevealProps> = ({ children, imagesToPreload
 
     // Race the loading task against safety timer
     Promise.race([loadingTask, safetyTimer]).then(() => {
-      // Wait for "Loading..." text to fade out (2.0s delay + 0.5s buffer)
+      // Wait for "Loading..." text to fade out
       const timer = setTimeout(() => {
         setIntroFinished(true);
-        document.body.style.overflow = 'auto'; // Changed from 'unset' to 'auto'
+        document.body.style.overflow = ''; // Clear inline style to allow CSS to take over
 
         // Play Swoosh Sound
         const audio = new Audio('/audio/curtain-swoosh.wav');
         audio.volume = 0.5;
         audio.play().catch(e => console.log("Audio play failed (user interaction needed first):", e));
 
-      }, 2500); // This delay aligns with the animation's fade-out of the loading content
+      }, 800); // Reduced delay to sync with curtain opening
 
       return () => clearTimeout(timer); // Cleanup the timeout if component unmounts
     });

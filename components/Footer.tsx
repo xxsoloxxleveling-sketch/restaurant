@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
               <div className="flex space-x-4">
                 <a href="https://www.instagram.com/culinovafzco?igsh=MXh4N2U1dGxuOXI3Zg==" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-gold-600 transition-colors"><Instagram size={20} /></a>
                 <a href="https://www.facebook.com/culinovacateringllc/" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-gold-600 transition-colors"><Facebook size={20} /></a>
-                <a href="https://www.linkedin.com/in/mahnoor-sardar-12412a381/" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-gold-600 transition-colors"><Linkedin size={20} /></a>
+                <a href="https://ae.linkedin.com/in/culinova-fzco-1a56bb37b" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-gold-600 transition-colors"><Linkedin size={20} /></a>
               </div>
             </div>
           </div>
@@ -66,14 +66,14 @@ const Footer: React.FC = () => {
           {/* Center: Developer Credit */}
           <div className="flex justify-center">
             <motion.a
-              href="https://www.linkedin.com/in/mahnoor-sardar-12412a381/"
+              href="https://ae.linkedin.com/in/culinova-fzco-1a56bb37b"
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ scale: 1.05, textShadow: "0px 0px 8px rgb(212,175,55)" }}
-              className="text-gold-500 font-medium relative group"
+              whileHover={{ scale: 1.05 }}
+              className="flex items-center gap-2 group opacity-80 hover:opacity-100 transition-opacity"
             >
-              <span className="relative z-10">Developed by Mahify</span>
-              <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-gold-500 transition-all duration-300 group-hover:w-full" />
+              <span className="text-[10px] uppercase tracking-widest text-neutral-500 group-hover:text-gold-500 transition-colors">Developed by</span>
+              <img src="/mahify_logo.jpg" alt="Mahify" className="h-8 w-auto object-contain" />
             </motion.a>
           </div>
 

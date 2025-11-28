@@ -9,6 +9,7 @@ import GlobalEffects from './components/GlobalEffects';
 import PageTransition from './components/PageTransition';
 import { AnimatePresence } from 'framer-motion';
 import Preloader from './components/Preloader';
+import WhatsAppWidget from './components/WhatsAppWidget';
 
 // Lazy load pages
 const Home = lazy(() => import('./components/Home'));
@@ -16,6 +17,8 @@ const EventsPage = lazy(() => import('./components/EventsPage'));
 const AboutPage = lazy(() => import('./components/AboutPage'));
 const MenuPage = lazy(() => import('./components/MenuPage'));
 const ContactPage = lazy(() => import('./components/ContactPage'));
+const MenuBuilder = lazy(() => import('./components/MenuBuilder'));
+const QuoteWizard = lazy(() => import('./components/QuoteWizard'));
 
 
 
@@ -30,6 +33,8 @@ const AnimatedRoutes = () => {
           <Route path="/about" element={<PageTransition><AboutPage /></PageTransition>} />
           <Route path="/menu" element={<PageTransition><MenuPage /></PageTransition>} />
           <Route path="/contact" element={<PageTransition><ContactPage /></PageTransition>} />
+          <Route path="/build-menu" element={<PageTransition><MenuBuilder /></PageTransition>} />
+          <Route path="/get-quote" element={<PageTransition><QuoteWizard /></PageTransition>} />
         </Routes>
       </Suspense>
     </AnimatePresence>
@@ -89,6 +94,7 @@ function App() {
     <div className="min-h-screen font-sans selection:bg-gold-200 selection:text-charcoal transition-colors duration-500 cursor-none">
       <GlobalEffects />
       <CustomCursor />
+      <WhatsAppWidget />
       <BookingModal isOpen={isModalOpen} onClose={closeModal} />
 
       {/* Curtain Reveal Wrapper */}

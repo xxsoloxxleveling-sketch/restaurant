@@ -6,7 +6,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const menuItems = [
   {
     id: 1,
-    title: "South Asian Cuisines",
+    title: "South Asian",
     description: "Indulge in carefully prepared authentic South Asian cuisine, rich in spices and tradition. From slow-cooked curries to aromatic biryanis, every dish tells a story of heritage.",
     image: "/south_asian_cuisine.webp"
   },
@@ -18,8 +18,14 @@ const menuItems = [
   },
   {
     id: 3,
-    title: "Continental & Pan Asian",
-    description: "A journey through global flavours. Expertly executed continental mains and vibrant Pan-Asian specialties that bring modern sophistication to your event.",
+    title: "Continental Cuisine",
+    description: "Expertly executed continental mains that bring modern sophistication to your event. A journey through global flavours.",
+    image: "/continental_cuisine.png"
+  },
+  {
+    id: 5,
+    title: "Pan Asian Specialties",
+    description: "Vibrant Pan-Asian specialties that bring a fusion of bold tastes and delicate textures to your palate.",
     image: "/continental_pan_asian.webp"
   },
   {
@@ -47,7 +53,7 @@ const MenuHighlights: React.FC = () => {
     }, 5000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [currentIndex]);
 
   return (
     <section id="menu" className="w-full bg-[#1a1a1a] py-20 overflow-hidden">
