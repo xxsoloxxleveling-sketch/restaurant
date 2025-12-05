@@ -18,6 +18,7 @@ const AboutPage = lazy(() => import('./components/AboutPage'));
 const MenuPage = lazy(() => import('./components/MenuPage'));
 const ContactPage = lazy(() => import('./components/ContactPage'));
 const MenuBuilder = lazy(() => import('./components/MenuBuilder'));
+const CuisineMenu = lazy(() => import('./components/CuisineMenu'));
 const QuoteWizard = lazy(() => import('./components/QuoteWizard'));
 
 
@@ -32,6 +33,7 @@ const AnimatedRoutes = () => {
           <Route path="/events" element={<PageTransition><EventsPage /></PageTransition>} />
           <Route path="/about" element={<PageTransition><AboutPage /></PageTransition>} />
           <Route path="/menu" element={<PageTransition><MenuPage /></PageTransition>} />
+          <Route path="/menu/:cuisineId" element={<PageTransition><CuisineMenu /></PageTransition>} />
           <Route path="/contact" element={<PageTransition><ContactPage /></PageTransition>} />
           <Route path="/build-menu" element={<PageTransition><MenuBuilder /></PageTransition>} />
           <Route path="/get-quote" element={<PageTransition><QuoteWizard /></PageTransition>} />
