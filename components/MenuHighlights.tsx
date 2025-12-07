@@ -87,10 +87,10 @@ const MenuHighlights: React.FC = () => {
                   {menuItems[currentIndex].description}
                 </p>
                 <button
-                  onClick={() => navigate('/contact')}
+                  onClick={() => navigate('/menu')}
                   className="px-8 py-3 border border-[#D4AF37] text-[#D4AF37] rounded-full hover:bg-[#D4AF37] hover:text-black transition-colors uppercase text-xs tracking-widest font-semibold"
                 >
-                  Book This Menu &rarr;
+                  View Our Menu &rarr;
                 </button>
               </motion.div>
             </AnimatePresence>

@@ -1,74 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { motion, useScroll, useTransform, useSpring, useInView } from 'framer-motion';
-
-const menuSections = [
-    {
-        id: 'arabian',
-        title: 'Arabian Delights',
-        description: 'Experience the rich and aromatic flavors of the Middle East. Our Arabian menu features authentic dishes prepared with traditional spices and cooking methods.',
-        items: [
-            'Lamb Ouzi with Oriental Rice',
-            'Mixed Grill Platter',
-            'Chicken Machboos',
-            'Hot & Cold Mezze Selection',
-            'Umm Ali'
-        ],
-        image: '/images/menu/arabian.png'
-    },
-    {
-        id: 'continental',
-        title: 'Continental Cuisine',
-        description: 'From classic European techniques to modern interpretations, our continental selection offers sophisticated flavors for discerning palates.',
-        items: [
-            'Grilled Salmon with Asparagus',
-            'Beef Tenderloin with Truffle Mash',
-            'Mushroom Risotto',
-            'Herb Roasted Chicken',
-            'Seared Scallops'
-        ],
-        image: '/continental_cuisine.png'
-    },
-    {
-        id: 'pan-asian',
-        title: 'Pan Asian Specialties',
-        description: 'Bold and vibrant flavors of Asia. A journey through the culinary traditions of the East, featuring authentic spices and fresh ingredients.',
-        items: [
-            'Thai Green Curry',
-            'Dim Sum Collection',
-            'Stir-Fried Noodles',
-            'Kung Pao Chicken',
-            'Sushi Platter'
-        ],
-        image: '/continental_pan_asian.webp'
-    },
-    {
-        id: 'south-asian',
-        title: 'South Asian Classics',
-        description: 'A journey through the spices of South Asia. Rich curries, fragrant biryanis, and tandoori specialties that bring warmth and depth to your palate.',
-        items: [
-            'Chicken Biryani',
-            'Butter Chicken',
-            'Lamb Rogan Josh',
-            'Dal Makhani',
-            'Assorted Naan Breads'
-        ],
-        image: '/images/menu/south-asian.png'
-    },
-    {
-        id: 'desserts',
-        title: 'Artisan Desserts',
-        description: 'The perfect sweet ending. Our pastry chefs craft exquisite desserts that are as beautiful to look at as they are delicious to eat.',
-        items: [
-            'Saffron Milk Cake',
-            'Pistachio Baklava',
-            'Chocolate Fondant',
-            'Fruit Tarts',
-            'Gourmet Ice Creams'
-        ],
-        image: '/images/menu/desserts.png'
-    }
-];
+import { menuSections } from '../data/menuData';
 
 interface MenuSectionProps {
     section: typeof menuSections[0];
@@ -78,6 +11,7 @@ interface MenuSectionProps {
 const MenuSection: React.FC<MenuSectionProps> = ({ section, setVisibleSection }) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { margin: "-50% 0px -50% 0px" });
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (isInView) {
@@ -97,7 +31,7 @@ const MenuSection: React.FC<MenuSectionProps> = ({ section, setVisibleSection })
                 <p className="text-stone-300 text-lg md:text-xl font-light leading-relaxed mb-10 max-w-xl">
                     {section.description}
                 </p>
-                <ul className="space-y-4">
+                <ul className="space-y-4 mb-10">
                     {section.items.map((item, idx) => (
                         <motion.li
                             key={idx}
@@ -112,6 +46,13 @@ const MenuSection: React.FC<MenuSectionProps> = ({ section, setVisibleSection })
                         </motion.li>
                     ))}
                 </ul>
+
+                <button
+                    onClick={() => navigate(`/menu/${section.id}`)}
+                    className="px-8 py-3 border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-black transition-all duration-300 uppercase tracking-widest text-sm font-semibold"
+                >
+                    Explore More
+                </button>
             </motion.div>
         </div>
     );
