@@ -5,7 +5,6 @@ import Features from './Features';
 import Services from './Services';
 import MenuHighlights from './MenuHighlights';
 import Sustainability from './Sustainability';
-import HaccpSection from './HaccpSection';
 
 const Home: React.FC = () => {
   return (
@@ -16,7 +15,6 @@ const Home: React.FC = () => {
       <Services />
       <MenuHighlights />
       <Sustainability />
-      <HaccpSection />
     </>
   );
 };

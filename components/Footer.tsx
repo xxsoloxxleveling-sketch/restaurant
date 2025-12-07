@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Instagram, Linkedin, Facebook, ShieldCheck } from 'lucide-react';
+import { Instagram, Linkedin, Facebook } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -47,13 +47,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Trust Seal */}
-          <div className="col-span-1 flex flex-col items-start md:items-end">
-            <div className="flex items-center gap-2 border border-gold-400 px-4 py-2 rounded-sm text-gold-700 dark:text-gold-400 hover:bg-gold-50 dark:hover:bg-white/10 transition-colors cursor-pointer">
-              <ShieldCheck size={24} />
-              <span className="text-xs font-semibold uppercase tracking-wider">HACCP Certified</span>
-            </div>
-          </div>
+
 
         </div>
 
