@@ -30,14 +30,15 @@ export const menuSections = [
         title: 'Continental Cuisine',
         description: 'From classic European techniques to modern interpretations, our continental selection offers sophisticated flavors for discerning palates.',
         items: [
-            'Grilled Salmon with Asparagus',
-            'Beef Tenderloin with Truffle Mash',
-            'Mushroom Risotto',
-            'Herb Roasted Chicken',
-            'Seared Scallops'
+            'Truffle Mushroom Arancini',
+            'Tempura Prawns with Wasabi Mayo',
+            'Mini Beef Sliders',
+            'Pan-Seared Salmon with Dill Cream',
+            'Roasted Beetroot & Goat Cheese Salad', 
+            'Blueberry Cheesecake'
         ],
         image: '/continental_cuisine.png'
-    },
+    }
     {
         id: 'pan-asian',
         title: 'Pan Asian Specialties',
